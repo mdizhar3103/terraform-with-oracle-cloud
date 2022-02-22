@@ -1,0 +1,25 @@
+1. Create a VCN (CIDR: 10.12.0.0/16)
+2. Create Public Subnet (above CIDR division) and Private Subnet (above CIDR division) in the VCN Created
+3. Create NAT Gateway for Private 
+4. Create Internet Gateway for Public
+5. Create a Route Table for Private subnet and Public subnet, choose the respective Gateway Created.
+6. Create Security List for Public Subnet:
+    Ingress Rule:
+        Source: 0.0.0.0/0
+        Port Numbers: 80 & 3389
+    Egress Rules:
+        Destination: Private Subnet CIDR
+        Port Number: 80
+        Second Rule: 
+            Destination 0.0.0.0/0
+            IP Protocol: All Protocol
+7. Create Security List for Private Subnet:
+    Ingress Rule:
+        Source: Public Subnet CIDR
+        Port Numbers: 80, 22, 3389
+    Egress Rules:
+            Destination 0.0.0.0/0
+            IP Protocol: All Protocol
+8. Attach the Route Tables to Subnets
+9. Create 2 Linux Instance in Private Subnet.
+10. Create Windows Instance in Public Subnet and enable public IP.
