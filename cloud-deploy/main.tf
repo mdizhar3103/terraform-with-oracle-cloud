@@ -231,4 +231,3 @@ resource "oci_core_instance" "rhel_instance_2" {
 
   preserve_boot_volume = false
 }
-}
