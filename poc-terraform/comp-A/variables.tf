@@ -41,3 +41,4 @@ variable "subnet_prohibit_public_ip_on_vnic" {
   description = "Prohibit Public IP on vnic"
   default     = true
 }
+
