@@ -17,8 +17,27 @@ variable "compartment_id" {
 #                       VCNs                           #
 ########################################################
 
-variable "comp_a_vcns" {
-  type        = map(string)
-  description = "VCNs in Current Compartments"
+variable "comp_a_vcns_display_name" {
+  type        = list(string)
+  description = "VCNs Name list in Compartment B"
 }
 
+variable "comp_a_vcns_cidr_blocks" {
+  type        = list(string)
+  description = "VCNs CIDR Blocks list in Compartment B"
+}
+
+########################################################
+#                       SUBNET                         #
+########################################################
+
+variable "hub_vcn_subnets" {
+  type        = map(string)
+  description = "Hub VCN Subnets"
+}
+
+variable "subnet_prohibit_public_ip_on_vnic" {
+  type        = bool
+  description = "Prohibit Public IP on vnic"
+  default     = true
+}

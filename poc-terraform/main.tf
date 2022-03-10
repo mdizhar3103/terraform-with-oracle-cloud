@@ -8,7 +8,12 @@ module "comp_a_module" {
   compartment_id = var.compartment_id
 
   # vcns
-  comp_a_vcns = var.comp_a_vcns
+  comp_a_vcns_display_name = var.comp_a_vcns_display_name
+  comp_a_vcns_cidr_blocks  = var.comp_a_vcns_cidr_blocks
+
+  # subents
+  hub_vcn_subnets                   = var.hub_vcn_subnets
+  subnet_prohibit_public_ip_on_vnic = var.subnet_prohibit_public_ip_on_vnic
 }
 
 module "comp_b_module" {
@@ -21,7 +26,8 @@ module "comp_b_module" {
   compartment_id = var.compartment_id
 
   # vcns
-  comp_b_vcns = var.comp_b_vcns
+  comp_b_vcns_display_name = var.comp_b_vcns_display_name
+  comp_b_vcns_cidr_blocks  = var.comp_b_vcns_cidr_blocks
 
   # subents
   prod_vcn_subnets                  = var.prod_vcn_subnets

@@ -1,6 +1,5 @@
-comp_b_vcns = { "nonprod-vcn" = "172.16.0.0/16",
-  "prod-vcn" = "192.168.0.0/16"
-}
+comp_b_vcns_display_name = ["nonprod-vcn", "prod-vcn"]
+comp_b_vcns_cidr_blocks  = ["172.16.0.0/16", "192.168.0.0/16"]
 
 prod_vcn_subnets = {
   "prod-vcn-pvt1-sn" = "192.168.1.0/24",
