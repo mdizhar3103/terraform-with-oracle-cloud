@@ -32,19 +32,19 @@ variable "comp_b_vcns_cidr_blocks" {
 ########################################################
 
 variable "prod_vcn_subnets" {
-  type = map(string)
+  type        = map(string)
   description = "Prod VCN Subnets"
 }
 
 variable "nonprod_vcn_subnets" {
-  type = map(string)
+  type        = map(string)
   description = "Non-Prod VCN Subnets"
 }
 
 variable "subnet_prohibit_public_ip_on_vnic" {
-  type = bool
+  type        = bool
   description = "Prohibit Public IP on vnic"
-  default = true
+  default     = true
 }
 
 
