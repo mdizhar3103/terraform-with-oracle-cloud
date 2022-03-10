@@ -53,19 +53,34 @@ variable "compartment_names" {
 #                       VCNs                           #
 ########################################################
 
-variable "comp_b_vcns" {
-  type        = map(string)
-  description = "VCNs in Current Compartments"
+variable "comp_b_vcns_display_name" {
+  type        = list(string)
+  description = "VCNs Name list in Compartment B"
 }
 
-variable "comp_a_vcns" {
-  type        = map(string)
-  description = "VCNs in Current Compartments"
+variable "comp_b_vcns_cidr_blocks" {
+  type        = list(string)
+  description = "VCNs CIDR Blocks list in Compartment B"
+}
+
+variable "comp_a_vcns_display_name" {
+  type        = list(string)
+  description = "VCNs Name list in Compartment B"
+}
+
+variable "comp_a_vcns_cidr_blocks" {
+  type        = list(string)
+  description = "VCNs CIDR Blocks list in Compartment B"
 }
 
 ###########################################################
 #                       SUBNETS                           #
 ###########################################################
+
+variable "hub_vcn_subnets" {
+  type        = map(string)
+  description = "Hub VCN Subnets"
+}
 
 variable "prod_vcn_subnets" {
   type        = map(string)
