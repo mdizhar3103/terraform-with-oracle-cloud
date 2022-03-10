@@ -20,6 +20,7 @@ variable "compartment_id" {
 variable "comp_a_vcns_display_name" {
   type        = list(string)
   description = "VCNs Name list in Compartment B"
+<<<<<<< HEAD
 }
 
 variable "comp_a_vcns_cidr_blocks" {
@@ -40,4 +41,26 @@ variable "subnet_prohibit_public_ip_on_vnic" {
   type        = bool
   description = "Prohibit Public IP on vnic"
   default     = true
+=======
+}
+
+variable "comp_a_vcns_cidr_blocks" {
+  type        = list(string)
+  description = "VCNs CIDR Blocks list in Compartment B"
+}
+
+########################################################
+#                       SUBNET                         #
+########################################################
+
+variable "hub_vcn_subnets" {
+  type = map(string)
+  description = "Hub VCN Subnets"
+}
+
+variable "subnet_prohibit_public_ip_on_vnic" {
+  type = bool
+  description = "Prohibit Public IP on vnic"
+  default = true
+>>>>>>> f9ba37149b80666ee0c278706700801c9bcbf6aa
 }
