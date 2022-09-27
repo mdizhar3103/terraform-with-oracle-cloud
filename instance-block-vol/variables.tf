@@ -208,7 +208,7 @@ variable "preserve_instance_boot_volume" {
 variable "ssh_key_file_path" {
     type        = string
     description = "SSH Key for accessing Linux Instance"
-    default     = "../../../izhar-okit.key.pub"
+    default     = "../../../izhar-key.pub"
 }
 
 
@@ -253,6 +253,6 @@ variable "remote_protocol" {
 variable "remote_connection_key" {
   type        = string
   description = "Private Key Path for Connecting to Server"
-  default     = "../../../izhar-okit.key"
+  default     = "../../../izhar.key"
 }
 

@@ -35,7 +35,7 @@ shape_memory = 2
 shape_ocpus = 1
 instance_public_ip = true 
 preserve_instance_boot_volume = true 
-ssh_key_file_path = "../../../izhar-okit.key.pub"
+ssh_key_file_path = "../../../izhar-key.pub"
 
 # Block Volume
 block_volume_size = 50
@@ -45,4 +45,4 @@ block_volume_attachment_device = "/dev/oracleoci/oraclevdb"
 # Remote Execution values
 remote_user = "opc"
 remote_protocol = "ssh"
-remote_connection_key = "../../../izhar-okit.key"
+remote_connection_key = "../../../izhar.key"
